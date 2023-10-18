@@ -1,0 +1,6 @@
+mongoimport --host=192.168.10.157 --port=27017 --collection=movies --db=nosql --type=csv --file="C:\backup\movie.csv" --headerline
+  mongoimport --host=192.168.10.157 --port=27017 --collection=emp --db=nosql --type=json --file="C:\backup\emp.json"
+
+
+
+  db.emp.find({$or:[{sal:{$gt:3400}},{sal:{$lt:5000}}]},{id:true,sal:1,job:true}).sort({sal:1});
